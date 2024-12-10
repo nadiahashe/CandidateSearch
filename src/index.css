@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  font-family: 'Inter Tight', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-size: 125%;
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  background: linear-gradient(
+    180deg,
+    rgb(6, 118, 95) 0%,
+    rgb(5, 71, 56) 15%,
+    rgba(0, 2, 18, 1) 100%
+  );
+  background-size: cover;
+  background-repeat: no-repeat no-repeat;
+  background-position: center center;
+  margin: 0;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+  margin: 0.5em 0;
+  /* padding: 0.5em; */
+}
+
+/* button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+} */
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+main {
+  color: #fff;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+tr {
+  border-radius: 10px;
+  background-color: #000;
+  color: white;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #333333;
+}
+
+.navBar {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1em 2em;
+}
+
+.nav-item {
+  padding: 0 5rem; 
+  margin-right: 2rem; /* right link offset more for some reason - fixed*/ 
+  list-style: none;
+  font-size: 126%;
+  /* display: inline-block; */
+}
+
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+}
+
+.active {
+  font-weight: 700;
+}
+
+.table {
+  width: 80vw;
+  table-layout: fixed;
+}
+
+/* GENERAL STYLES */
+.bigText {
+  font-size: 4em;
+  font-weight: 700;
+  text-align: center !important;
+}
+
+.userName {
+  font-size: 2.5em;
+  font-weight: 700;
+  /* text-align: center !important; */
+}
+
+p {
+  font-size: 1.25em;
+  font-weight: 400;
+}
+ul {
+  list-style-type: none;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  /* height: 100vh; */
+}
+
+.loading {
+  font-size: 2em;
+  font-weight: 700;
+  color: white;
+  background-color: green;
+  width: 500px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+/* SAVED CANDIDATE STYLES  */
+.grid-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.grid-row {
+  display: inline-grid;
+  /* just learned this.. but basically making 7 boxes, each with 1 (equal) fraction of the space  */
+  grid-template-columns: repeat(7, 1fr);  
+  background-color: rgb(46, 46, 46);
+  margin: 10px 25px;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.5);
+  align-items: center;
+}
+
+.grid-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  color: white;
+  background-color: black;
+  height: 200px;
+}
+
+.alt {
+  background-color: rgb(62, 62, 62);
+}
+
+.avatar img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+.remove-button button {
+  height: 125px;
+  width: 125px;
+  border-radius: 50%;
+  padding: 10px;
+  font-size: 125% ;
+  background-color: red;
+  color: white;
+}
+
+.remove-button button:hover {
+  background-color: darkred;
+}
+
+
+/* BUTTONS  */
+.button-container {
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: space-around; /* Space buttons evenly */
+  align-items: center;
+  margin: 40px 0; /* Optional margin for spacing */
+  width: 1200px; /* Sets the width of the button container */
+}
+
+.button {
+  border: none;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  color: white;
+  font-size: 25px; 
+  /* font-weight: bold; */
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+  margin-bottom: 10px;
+}
+
+.button.fetch {
+  background-color: red;
+}
+
+.button.save {
+  background-color: green;
+}
+
+.button.advanced {
+  background-color: blue;
+}
+
+.label {
+  /* font-size: 28px; */
+  text-align: center;
+  /* color: white; */
+}
